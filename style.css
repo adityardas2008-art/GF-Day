@@ -219,3 +219,105 @@ font-size:48px;
 }
 
 }
+
+/* LOVE LETTER */
+
+.love-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:80px 20px;
+
+}
+
+.love-card{
+
+max-width:900px;
+
+width:100%;
+
+text-align:center;
+
+animation:fadeUp 1s ease;
+
+}
+
+.love-card h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+margin-bottom:30px;
+
+color:white;
+
+}
+
+.love-card p{
+
+font-size:20px;
+
+line-height:1.9;
+
+margin-bottom:25px;
+
+}
+
+#nextBtn{
+
+margin-top:20px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff4d6d;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+#nextBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px white;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
