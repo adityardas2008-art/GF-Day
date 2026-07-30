@@ -401,68 +401,68 @@ document.body.style.transition="2s";
 
 document.body.style.background="black";
 
-// Final Message
+// 
+  setTimeout(() => {
 
-setTimeout(()=>{
+document.body.style.opacity = "0";
 
-document.body.innerHTML=`
+setTimeout(() => {
 
-<div style="height:100vh;
-
+document.body.innerHTML = `
+<div style="
+height:100vh;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 flex-direction:column;
-
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
 color:white;
-
 text-align:center;
-
 padding:20px;
+font-family:Poppins;
+opacity:0;
+transition:opacity 2s;
+">
 
-font-family:Poppins;">
-
-<h1 style="font-size:70px;
-
-font-family:'Great Vibes',cursive;">
-
-I Love You
-
+<h1 style="
+font-size:70px;
+font-family:'Great Vibes',cursive;
+margin-bottom:10px;">
+I Love You ❤️
 </h1>
 
-<h2>Khushu ❤️</h2>
+<h2>Khushu</h2>
 
-<p style="font-size:24px;
+<p style="
+font-size:22px;
+line-height:2;
+max-width:700px;">
+You are the most beautiful chapter of my life.<br><br>
 
-max-width:700px;
+Every heartbeat...<br>
+Every dream...<br>
+Every tomorrow...<br>
+has your name written on it.<br><br>
 
-line-height:2;">
+Happy Girlfriend's Day ❤️<br><br>
 
-You are the most beautiful chapter of my life.
-
-Every heartbeat,
-
-every dream,
-
-every tomorrow...
-
-has your name written on it.
-
-Happy Girlfriend's Day.
-
-Forever Yours,
-
+Forever Yours,<br>
 <b>Aditya ❤️</b>
-
 </p>
 
 </div>
-
 `;
 
-},2500);
+document.body.style.opacity = "1";
+
+const finalPage = document.body.firstElementChild;
+
+setTimeout(() => {
+finalPage.style.opacity = "1";
+}, 100);
+
+}, 1500);
+
+}, 2500);  
 
 }
