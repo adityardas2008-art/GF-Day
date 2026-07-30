@@ -429,3 +429,118 @@ setTimeout(()=>heart.remove(),7000);
 alert("Happy Girlfriend's Day, Khushu ❤️\n\nLove You Forever.\n- Aditya");
 
 }
+/* ---------------- */
+/* FINAL */
+/* ---------------- */
+
+for(let i=0;i<250;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+document.getElementById("stars").appendChild(star);
+
+}
+
+document.getElementById("celebrate").onclick=function(){
+
+// Create 350 hearts
+
+for(let i=0;i<350;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["❤️","💕","💖","🌹","✨"][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(18+Math.random()*30)+"px";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),7000);
+
+}
+
+// Screen fades
+
+document.body.style.transition="2s";
+
+document.body.style.background="black";
+
+// Final Message
+
+setTimeout(()=>{
+
+document.body.innerHTML=`
+
+<div style="height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+font-family:Poppins;">
+
+<h1 style="font-size:70px;
+
+font-family:'Great Vibes',cursive;">
+
+I Love You
+
+</h1>
+
+<h2>Khushu ❤️</h2>
+
+<p style="font-size:24px;
+
+max-width:700px;
+
+line-height:2;">
+
+You are the most beautiful chapter of my life.
+
+Every heartbeat,
+
+every dream,
+
+every tomorrow...
+
+has your name written on it.
+
+Happy Girlfriend's Day.
+
+Forever Yours,
+
+<b>Aditya ❤️</b>
+
+</p>
+
+</div>
+
+`;
+
+},2500);
+
+}
