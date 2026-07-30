@@ -139,3 +139,114 @@ behavior:"smooth"
 });
 
 }
+/* ---------------- */
+/* PHOTO GALLERY */
+/* ---------------- */
+
+const photos=[
+
+"images/1.jpg",
+
+"images/2.jpg",
+
+"images/3.jpg",
+
+"images/4.jpg",
+
+"images/5.jpg",
+
+"images/6.jpg",
+
+"images/7.jpg",
+
+"images/8.jpg",
+
+"images/9.jpg",
+
+"images/10.jpg"
+
+];
+
+const captions=[
+
+"Your smile is my favourite place ❤️",
+
+"Every glance makes my heart skip a beat 🥹",
+
+"Beauty has a name... Khushu 🌹",
+
+"I could admire you forever 💖",
+
+"You make ordinary moments magical ✨",
+
+"Your eyes hold my whole world 👀❤️",
+
+"My favourite picture... until the next one 📸",
+
+"You are elegance, grace and happiness together 💞",
+
+"I'll always be proud to call you mine 🫶",
+
+"My forever favourite person ❤️"
+
+];
+
+let current=0;
+
+const slide=document.getElementById("slideImage");
+
+const caption=document.getElementById("caption");
+
+const dots=document.querySelectorAll(".dot");
+
+function showSlide(index){
+
+slide.src=photos[index];
+
+caption.innerHTML=captions[index];
+
+dots.forEach(dot=>dot.classList.remove("active"));
+
+dots[index].classList.add("active");
+
+}
+
+setInterval(()=>{
+
+current++;
+
+if(current>=photos.length){
+
+current=0;
+
+}
+
+showSlide(current);
+
+},3500);
+
+showSlide(current);
+
+/* Button */
+
+const timerBtn=document.getElementById("timerBtn");
+
+if(timerBtn){
+
+timerBtn.onclick=()=>{
+
+const timer=document.getElementById("timer");
+
+if(timer){
+
+timer.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+};
+
+}
