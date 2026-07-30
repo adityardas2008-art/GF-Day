@@ -161,8 +161,6 @@ const photos=[
 
 "images/8.jpg",
 
-"images/9.jpg",
-
 "images/10.jpg"
 
 ];
@@ -187,7 +185,6 @@ const captions=[
 
 "I'll always be proud to call you mine 🫶",
 
-"My forever favourite person ❤️"
 
 ];
 
