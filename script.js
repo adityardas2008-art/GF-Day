@@ -350,22 +350,21 @@ if(musicBtn){
 
 musicBtn.onclick=()=>{
 
-const music=document.getElementById("music");
+const musicBtn=document.getElementById("musicBtn");
 
-if(music){
+if(musicBtn){
 
-music.scrollIntoView({
+musicBtn.onclick=()=>{
+
+document.getElementById("final").scrollIntoView({
 
 behavior:"smooth"
 
 });
 
-}
-
 };
 
 }
-
 /* Final 
 /* ---------------- */
 /* FINAL */
