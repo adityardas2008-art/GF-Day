@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ff9a9e,#ffc2d1);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#120010;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1s;
+}
+
+#loader h1{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#ff7aa2;
+}
+
+#loader p{
+    margin-top:20px;
+    color:white;
+    letter-spacing:2px;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:58px;
+    font-family:'Great Vibes',cursive;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+    opacity:.9;
+}
+
+#enter{
+
+margin-top:45px;
+
+padding:15px 40px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:white;
+
+color:#ff3f70;
+
+font-weight:bold;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(255,255,255,.5);
+
+}
+
+#enter:hover{
+
+transform:translateY(-5px) scale(1.05);
+
+background:#ffe4eb;
+
+box-shadow:0 0 40px #fff;
+
+}
+
+/* Floating Hearts */
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+color:white;
+
+animation:floatUp linear forwards;
+
+opacity:.8;
+
+pointer-events:none;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Glass Card */
+
+.glass{
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.3);
+
+border-radius:25px;
+
+padding:30px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff7ba0;
+
+border-radius:20px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+#enter{
+
+width:90%;
+
+}
+
+#loader h1{
+
+font-size:48px;
+
+}
+
+}
