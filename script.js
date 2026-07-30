@@ -116,3 +116,26 @@ behavior:"smooth"
 // ----------------------------
 
 console.log("❤️ Website Made With Love By Aditya ❤️");
+// Continue Button
+
+const nextBtn = document.getElementById("nextBtn");
+
+if(nextBtn){
+
+nextBtn.addEventListener("click",()=>{
+
+const gallery=document.getElementById("gallery");
+
+if(gallery){
+
+gallery.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+}
