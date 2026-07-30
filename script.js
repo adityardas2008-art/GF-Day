@@ -327,3 +327,105 @@ behavior:"smooth"
 };
 
 }
+/* ---------------- */
+/* REASONS */
+/* ---------------- */
+
+function reveal(card){
+
+const text = card.querySelector("p");
+
+if(text.style.display==="block") return;
+
+text.style.display="block";
+
+card.firstChild.textContent="❤️";
+
+card.style.background="rgba(255,255,255,.3)";
+
+}
+
+/* Next */
+
+const musicBtn=document.getElementById("musicBtn");
+
+if(musicBtn){
+
+musicBtn.onclick=()=>{
+
+const music=document.getElementById("music");
+
+if(music){
+
+music.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+};
+
+}
+/* ---------------- */
+/* MUSIC */
+/* ---------------- */
+
+const song=document.getElementById("song");
+
+const playBtn=document.getElementById("playBtn");
+
+let playing=false;
+
+playBtn.onclick=function(){
+
+if(!playing){
+
+song.play();
+
+playBtn.innerHTML="⏸ Pause";
+
+playing=true;
+
+}
+
+else{
+
+song.pause();
+
+playBtn.innerHTML="▶ Play Our Song";
+
+playing=false;
+
+}
+
+}
+
+/* Final Celebration */
+
+document.getElementById("celebrate").onclick=function(){
+
+for(let i=0;i<200;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["❤️","💖","💕","🌸"][Math.floor(Math.random()*4)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),7000);
+
+}
+
+alert("Happy Girlfriend's Day, Khushu ❤️\n\nLove You Forever.\n- Aditya");
+
+}
