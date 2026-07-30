@@ -304,3 +304,26 @@ behavior:"smooth"
 };
 
 }
+/* Timeline Button */
+
+const reasonBtn=document.getElementById("reasonBtn");
+
+if(reasonBtn){
+
+reasonBtn.onclick=()=>{
+
+const next=document.getElementById("reasons");
+
+if(next){
+
+next.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+};
+
+}
