@@ -341,29 +341,14 @@ card.firstChild.textContent="❤️";
 card.style.background="rgba(255,255,255,.3)";
 
 }
+const musicBtn = document.getElementById("musicBtn");
 
-/* Next */
-
-const musicBtn=document.getElementById("musicBtn");
-
-if(musicBtn){
-
-musicBtn.onclick=()=>{
-
-const musicBtn=document.getElementById("musicBtn");
-
-if(musicBtn){
-
-musicBtn.onclick=()=>{
-
-document.getElementById("final").scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-};
-
+if (musicBtn) {
+    musicBtn.onclick = () => {
+        document.getElementById("final").scrollIntoView({
+            behavior: "smooth"
+        });
+    };
 }
 /* Final 
 /* ---------------- */
